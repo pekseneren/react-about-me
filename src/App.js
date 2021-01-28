@@ -1,34 +1,36 @@
-import logo from './logo.svg';
+/* eslint-disable no-unused-expressions */
 import './App.css';
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import axios from 'axios';
+import Repo from "./components/Repo";
 
 function App() {
   
-  const getRepositories = async () => {
+  const [repos, setRepos] = useState([])
 
-    const response = await axios.get("https://api.github.com/users/pekseneren/repos");
+  useEffect(() => {
 
-    console.log(response);
-  }
+    const getRepositories = async () => {
+      const response = await axios.get("https://api.github.com/users/pekseneren/repos");
+  
+      var tmpRepos = response.data.map(r => ({key: r.node_id, url: r.html_url, name: r.name, description: r.description}));
 
-  getRepositories();
+      setRepos(tmpRepos);
+    }
+
+    getRepositories();
+  }, []);
 
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <div className="container">
+          <div className="row">
+            {repos.map(repo => {
+              return <Repo repo={repo}/>
+            })}
+          </div>
+        </div>
       </header>
     </div>
   );

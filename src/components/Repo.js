@@ -1,12 +1,12 @@
 import '../App.css'
 
 function Repo(props) {
-const {url, name, description} = props.repo
+const {key, url, name, description} = props.repo
 
 return (
 <div className="Repo">
-    <a href={url} target="blank">{name}</a>
-    <span>{description}</span>
+    <input type="hidden" key={key}></input>
+    <a key={key} href={url} target="blank">{name} - {description}</a>
 </div>
 );
 }
