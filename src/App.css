@@ -1,5 +1,13 @@
-.App {
+.App {  
   text-align: center;
+  background-color: #282c34a8;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(1px + 2vmin);
+  color: white;
 }
 
 .App-logo {
@@ -13,19 +21,26 @@
   }
 }
 
-.App-header {
-  background-color: #282c34a8;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
 .App-link {
   color: #61dafb;
+}
+
+header{
+  text-align: center;
+  background-color: #282c34e1;
+  color: white;
+  font-size: calc(10px + 2vmin);  
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.486);
+  transition: 0.3s;
+}
+
+footer{
+  text-align: center;
+  background-color: #282c34e1;
+  color: white;
+  font-size: calc(10px + 2vmin);
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.486);
+  transition: 0.3s;
 }
 
 @keyframes App-logo-spin {
@@ -35,4 +50,25 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.repository {
+  background-color: #282c344b;
+  margin-top: 20px;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.486);
+  transition: 0.3s;
+  width: 80%;
+}
+
+.repository:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6);
+}
+
+.repositoryContainer {
+  padding: 2px 16px;
+  display: flex;
+}
+
+.repositoryContainer > div {
+  flex: 1; /*grow*/
 }

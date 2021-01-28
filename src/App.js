@@ -15,6 +15,8 @@ function App() {
   
       var tmpRepos = response.data.map(r => ({key: r.node_id, url: r.html_url, name: r.name, description: r.description, fork: r.fork}));
 
+      //const response = await axios.get("https://api.github.com/repos/pekseneren/reactjs-about-me/languages");
+      
       console.log(tmpRepos);
 
       setRepos(tmpRepos);
@@ -25,22 +27,20 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <div className="container">
-          <div className="row">
-            <h1>My Repositories</h1>
+        <div className="repositoryContainer">
+          <div>
+            <h4>My Repositories</h4>
             {repos.filter(r => !r.fork).map(repo => {
               return <Repo repo={repo}/>
             })}
           </div>
-          <div className="row">
-            <h1>My Forked* Repositories</h1>
+          <div>
+            <h4>My Forked* Repositories</h4>
             {repos.filter(r => r.fork).map(repo => {
               return <Repo repo={repo}/>
             })}
           </div>
         </div>
-      </header>
     </div>
   );
 }

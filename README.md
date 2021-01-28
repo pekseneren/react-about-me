@@ -1,5 +1,5 @@
 ## About me Page
 
-I'm learning ReactJS through this project. Developing an 'about me' page with projects(github repositories) etc.
+I'm learning ReactJS with this project.
 
 - [Live demo](https://pekseneren.herokuapp.com/)
