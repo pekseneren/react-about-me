@@ -26,8 +26,8 @@
 
 header{
   text-align: center;
-  background-color: #282c34e1;
-  color: white;
+  background-color: #161b22;
+  color: #c9d1d9;
   font-size: calc(10px + 2vmin);  
   box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.486);
   transition: 0.3s;
@@ -35,32 +35,43 @@ header{
 
 footer{
   text-align: center;
-  background-color: #282c34e1;
-  color: white;
+  background-color: #161b22;
+  color: #c9d1d9;
   font-size: calc(10px + 2vmin);
   box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.486);
   transition: 0.3s;
 }
 
-.repositoryContainer {
+.repositoryContainer{
   padding: 2px 16px;
 }
 
-.repositoryContainer > div {
+.repositoryContainer > div{
   flex: 1; /*grow*/
 }
 
 .Box{
-  background-color: var(--color-bg-primary);
-  border-color: var(--color-border-primary);
+  background-color: #0d1117;
+  border-color: #30363d;
   border-style: solid;
   border-width: 1px;
   border-radius: 6px;
   margin-bottom: 1rem;
 }
 
+.container{
+  width: 80%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  text-overflow: ellipsis;
+  overflow-wrap: break-word;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
 .Box:hover{
-  box-shadow: 0 16px 32px 0 rgba(46, 43, 43, 0.425);
+  box-shadow: 0 8px 8px 0 rgba(46, 43, 43, 0.425);
 }
 
 ol li{ 
@@ -68,43 +79,42 @@ ol li{
 }
 
 .text-small {
-  font-size: 12px !important;
+  font-size: calc(5px + 1vmin);
+  color: #8b949e;
 }
 
 a {
+  font-size: calc(10px + 1vmin);
   color:#58a6ff; 
   text-decoration: none;
 }
 
 a:visited {
+  font-size: calc(10px + 1vmin);
   color:#58a6ff;
 }
 
 a:hover {
+  font-size: calc(10px + 1vmin);
   color:#58a6ff;
   text-decoration: underline;
 }
 
 a:active {
+  font-size: calc(10px + 1vmin);
   color:#58a6ff;
 }
 
 h1{
-  font-size: 32px !important;
+  color: #c9d1d9;
+  font-size: calc(12px + 2vmin);
 }
 
 h2{
-  font-size: 16px !important;
+  color: #c9d1d9;
+  font-size: calc(2px + 2vmin);
 }
 
 ol { 
   padding-left: 0em; 
-}
-
-.container{
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
 }

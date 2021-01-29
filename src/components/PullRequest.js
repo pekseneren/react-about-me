@@ -4,7 +4,7 @@ function PullRequest(props) {
     const {url, title} = props.pr
 
     return (
-        <li className="pullRequest">
+        <li>
             <div className="Box">
                 <div className="container">
                     <div>

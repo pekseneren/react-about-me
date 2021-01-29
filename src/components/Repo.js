@@ -16,7 +16,7 @@ function Repo(props) {
     });
 
     return (
-        <li className="repository">
+        <li>
             <div className="Box">
                 <div className="container">
                     <a href={url} target="blank"><span>{name}</span></a>
