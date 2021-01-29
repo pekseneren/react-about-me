@@ -1,12 +1,13 @@
-/* eslint-disable no-unused-expressions */
 import './App.css';
 import React, { useState, useEffect } from 'react'
 import axios from 'axios';
 import Repo from "./components/Repo";
+import PullRequest from "./components/PullRequest";
 
 function App() {
   
   const [repos, setRepos] = useState([])
+  const [pullRequests, setPullRequests] = useState([])
 
   useEffect(() => {
 
@@ -18,11 +19,20 @@ function App() {
       await Promise.all(tmpRepos.map(async (r) => setRepoLagnuageStat(r)));
 
       setRepos(tmpRepos);
+    }
 
-      console.log(tmpRepos);
+    const getPullRequests = async () => {
+      
+      const response = await axios.get("https://api.github.com/search/issues?q=author%3Apekseneren+type%3Apr");
+
+      var tmpPullRequests = response.data.items.map(pr => ({url: pr.html_url, title: pr.title}));
+
+      setPullRequests(tmpPullRequests);
     }
 
     getRepositories();
+
+    getPullRequests();
   }, []);
 
   const setRepoLagnuageStat = async (r) => {
@@ -43,15 +53,24 @@ function App() {
     <div className="App">
         <div className="repositoryContainer">
           <div>
-            <h4>My Repositories</h4>
+            <h1>Here's my projects and pull requests to other open source projects</h1>
+          </div>
+          <div>
+            <h4>Repositories</h4>
             {repos.filter(r => !r.fork).map(repo => {
-              return <Repo repo={repo}/>
+              return <Repo key={repo.id} repo={repo}/>
             })}
           </div>
           <div>
-            <h4>My Forked* Repositories</h4>
+            <h4>Forked Repositories</h4>
             {repos.filter(r => r.fork).map(repo => {
-              return <Repo repo={repo}/>
+              return <Repo key={repo.id} repo={repo}/>
+            })}
+          </div>
+          <div>
+            <h4>Pull Requests</h4>
+            {pullRequests.map(pr => {
+              return <PullRequest key={pr.url} pr={pr}/>
             })}
           </div>
         </div>

@@ -1,29 +1,13 @@
 import '../App.css'
-import LanguageStat from "./LanguageStat";
 
-function Repo(props) {
-    const {id, url, name, description, stats} = props.repo
-
-    let totals = 0;
-
-    stats.forEach(function(item){
-        totals+= item.usage;
-    });
-
-    stats.forEach(function(item){
-        let percent = (100 * item.usage) / totals;
-        item.percent = percent.toFixed(2) + "%";
-    });
+function PullRequest(props) {
+    const {url, title} = props.pr
 
     return (
-        <div className="repository">
+        <div className="pullRequest">
             <div className="container">
-                <h4>{name}</h4>
-                <p>{description}</p>
-                <div>{stats.map(stat => 
-                    {
-                        return <LanguageStat key={stat.name} stat={stat}/>
-                    })}
+                <div>
+                    <p>{title}</p>
                 </div>
                 <div>
                     <a target="blank" href={url}>
@@ -37,4 +21,4 @@ function Repo(props) {
     );
 }
 
-export default Repo;
+export default PullRequest;
