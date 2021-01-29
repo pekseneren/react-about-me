@@ -1,14 +1,30 @@
 import '../App.css'
+import LanguageStat from "./LanguageStat";
 
 function Repo(props) {
-    const {key, url, name, description, stats} = props.repo
+    const {id, url, name, description, stats} = props.repo
+
+    let totals = 0;
+
+    stats.forEach(function(item){
+        totals+= item.usage;
+    });
+
+    stats.forEach(function(item){
+        let percent = (100 * item.usage) / totals;
+        item.percent = percent.toFixed(2) + "%";
+    });
 
     return (
-        <div key={key} className="repository">
+        <div key={id} className="repository">
             <div className="container">
-                <div>{name}</div>
-                <div>{description}</div>
-                <div>{stats}</div>
+                <h4>{name}</h4>
+                <p>{description}</p>
+                <div>{stats.map(stat => 
+                    {
+                        return <LanguageStat stat={stat}/>
+                    })}
+                </div>
                 <div>
                     <a target="blank" href={url}>
                         <svg height="32" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true">
