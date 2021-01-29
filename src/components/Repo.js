@@ -2,7 +2,7 @@ import '../App.css'
 import LanguageStat from "./LanguageStat";
 
 function Repo(props) {
-    const {id, url, name, description, stats} = props.repo
+    const {url, name, description, stats} = props.repo
 
     let totals = 0;
 
@@ -18,7 +18,7 @@ function Repo(props) {
     return (
         <li>
             <div className="Box">
-                <div className="container">
+                <div className="Container">
                     <a href={url} target="blank"><span>{name}</span></a>
                     <p className="text-small">{description}</p>
                     <div>{stats.map(stat => 

@@ -6,7 +6,7 @@ function PullRequest(props) {
     return (
         <li>
             <div className="Box">
-                <div className="container">
+                <div className="Container">
                     <div>
                         <a target="blank" href={url}>{title}</a>
                     </div>

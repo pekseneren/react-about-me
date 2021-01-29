@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios';
 import Repo from "./components/Repo";
 import PullRequest from "./components/PullRequest";
+import * as api from "./apis/GithubApi";
 
 function App() {
   
@@ -12,7 +13,7 @@ function App() {
   useEffect(() => {
 
     const getRepositories = async () => {
-      const response = await axios.get("https://api.github.com/users/pekseneren/repos");
+      const response = await axios.get(api.repositoriesUrl);
   
       var tmpRepos = response.data.map(r => ({id: r.id, url: r.html_url, name: r.name, description: r.description, fork: r.fork}));
 
@@ -23,7 +24,7 @@ function App() {
 
     const getPullRequests = async () => {
       
-      const response = await axios.get("https://api.github.com/search/issues?q=author%3Apekseneren+type%3Apr");
+      const response = await axios.get(api.pullRequestsUrl);
 
       var tmpPullRequests = response.data.items.map(pr => ({url: pr.html_url, title: pr.title}));
 
@@ -37,7 +38,7 @@ function App() {
 
   const setRepoLagnuageStat = async (r) => {
 
-    const response = await axios.get("https://api.github.com/repos/pekseneren/" + r.name + "/languages");
+    const response = await axios.get(api.repositoryLanguageStatUrl(r.name));
 
     var tmpStats = [];
 
@@ -51,7 +52,7 @@ function App() {
 
   return (
     <div className="App">
-        <div className="repositoryContainer">
+        <div className="AppContainer">
           <h1>Here's my projects and pull requests to other open source projects</h1>
           <h2>Repositories</h2>
           <ol>

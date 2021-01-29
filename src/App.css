@@ -42,11 +42,11 @@ footer{
   transition: 0.3s;
 }
 
-.repositoryContainer{
+.AppContainer{
   padding: 2px 16px;
 }
 
-.repositoryContainer > div{
+.AppContainer > div{
   flex: 1; /*grow*/
 }
 
@@ -59,7 +59,7 @@ footer{
   margin-bottom: 1rem;
 }
 
-.container{
+.Container{
   width: 80%;
   padding-right: 15px;
   padding-left: 15px;
@@ -71,7 +71,7 @@ footer{
 }
 
 .Box:hover{
-  box-shadow: 0 8px 8px 0 rgba(46, 43, 43, 0.425);
+  box-shadow: 1px 0px 20px 12px rgb(46 43 43 / 43%);
 }
 
 ol li{ 
