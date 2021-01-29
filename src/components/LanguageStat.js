@@ -5,9 +5,7 @@ function LanguageStat(props) {
 
     return (
         <div className="languageStat">
-            <div className="container">
-                <div>{name} - {percent}</div>
-            </div>
+            <p className="text-small">{name} - {percent}</p>
         </div>
     );
 }

@@ -52,27 +52,25 @@ function App() {
   return (
     <div className="App">
         <div className="repositoryContainer">
-          <div>
-            <h1>Here's my projects and pull requests to other open source projects</h1>
-          </div>
-          <div>
-            <h4>Repositories</h4>
+          <h1>Here's my projects and pull requests to other open source projects</h1>
+          <h2>Repositories</h2>
+          <ol>
             {repos.filter(r => !r.fork).map(repo => {
               return <Repo key={repo.id} repo={repo}/>
             })}
-          </div>
-          <div>
-            <h4>Forked Repositories</h4>
+          </ol>
+          <h2>Forked Repositories</h2>
+          <ol>
             {repos.filter(r => r.fork).map(repo => {
               return <Repo key={repo.id} repo={repo}/>
             })}
-          </div>
-          <div>
-            <h4>Pull Requests</h4>
+          </ol>
+          <h2>Pull Requests</h2>
+          <ol>
             {pullRequests.map(pr => {
               return <PullRequest key={pr.url} pr={pr}/>
             })}
-          </div>
+          </ol>
         </div>
     </div>
   );

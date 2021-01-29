@@ -1,6 +1,5 @@
-.App {  
-  text-align: center;
-  background-color: #282c34a8;
+.App {
+  background-color: #0d1117;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -43,22 +42,69 @@ footer{
   transition: 0.3s;
 }
 
-.repository, .pullRequest {
-  background-color: #282c344b;
-  margin-top: 20px;
-  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.486);
-  transition: 0.3s;
-  width: 100%;
-}
-
-.repository:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6);
-}
-
 .repositoryContainer {
   padding: 2px 16px;
 }
 
 .repositoryContainer > div {
   flex: 1; /*grow*/
+}
+
+.Box{
+  background-color: var(--color-bg-primary);
+  border-color: var(--color-border-primary);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.Box:hover{
+  box-shadow: 0 16px 32px 0 rgba(46, 43, 43, 0.425);
+}
+
+ol li{ 
+  list-style:none 
+}
+
+.text-small {
+  font-size: 12px !important;
+}
+
+a {
+  color:#58a6ff; 
+  text-decoration: none;
+}
+
+a:visited {
+  color:#58a6ff;
+}
+
+a:hover {
+  color:#58a6ff;
+  text-decoration: underline;
+}
+
+a:active {
+  color:#58a6ff;
+}
+
+h1{
+  font-size: 32px !important;
+}
+
+h2{
+  font-size: 16px !important;
+}
+
+ol { 
+  padding-left: 0em; 
+}
+
+.container{
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
