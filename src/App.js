@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Repo from "./components/Repo";
 import PullRequest from "./components/PullRequest";
@@ -36,18 +36,22 @@ function App() {
     getPullRequests();
   }, []);
 
-  const setRepoLanguageStat = async (r) => {
+  const setRepoLanguageStat = async (repository) => {
 
-    const response = await axios.get(api.repositoryLanguageStatUrl(r.name));
+    const response = await axios.get(api.repositoryLanguageStatUrl(repository.name));
 
     var tmpStats = [];
 
-    for(var i = 0; i < Object.keys(response.data).length; i++)
-    {
-      tmpStats.push({name: Object.keys(response.data)[i], usage: response.data[Object.keys(response.data)[i]]});
-    }
+    Object.keys(response.data).forEach(key => {
 
-    r.stats = tmpStats;
+      tmpStats.push({
+        name: key,
+        usage: response.data[key]
+      });
+
+    });
+
+    repository.stats = tmpStats;
   }
 
   return (
