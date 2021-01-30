@@ -17,7 +17,7 @@ function App() {
 
       var tmpRepos = response.data.map(r => ({id: r.id, url: r.html_url, name: r.name, description: r.description, fork: r.fork}));
 
-      await Promise.all(tmpRepos.map(async (r) => setRepoLagnuageStat(r)));
+      await Promise.all(tmpRepos.map(async (r) => setRepoLanguageStat(r)));
 
       setRepos(tmpRepos);
     }
@@ -36,7 +36,7 @@ function App() {
     getPullRequests();
   }, []);
 
-  const setRepoLagnuageStat = async (r) => {
+  const setRepoLanguageStat = async (r) => {
 
     const response = await axios.get(api.repositoryLanguageStatUrl(r.name));
 
