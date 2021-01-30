@@ -17,8 +17,8 @@ function Repo(props) {
 
     return (
         <li>
-            <div className="Box">
-                <div className="Container">
+            <div className="box">
+                <div className="container">
                     <a href={url} target="blank"><span>{name}</span></a>
                     <p className="text-small">{description}</p>
                     <div>{stats.map(stat => 

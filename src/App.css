@@ -50,7 +50,7 @@ footer{
   flex: 1; /*grow*/
 }
 
-.Box{
+.box{
   background-color: #0d1117;
   border-color: #30363d;
   border-style: solid;
@@ -59,7 +59,7 @@ footer{
   margin-bottom: 1rem;
 }
 
-.Container{
+.container{
   width: 80%;
   padding-right: 15px;
   padding-left: 15px;
@@ -70,7 +70,7 @@ footer{
   margin-bottom: 0.5rem;
 }
 
-.Box:hover{
+.box:hover{
   box-shadow: 1px 0px 20px 12px rgb(46 43 43 / 43%);
 }
 

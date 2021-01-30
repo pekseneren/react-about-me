@@ -5,8 +5,8 @@ function PullRequest(props) {
 
     return (
         <li>
-            <div className="Box">
-                <div className="Container">
+            <div className="box">
+                <div className="container">
                     <div>
                         <a target="blank" href={url}>{title}</a>
                     </div>
