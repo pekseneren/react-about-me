@@ -78,14 +78,14 @@ function App() {
         <div className="AppContainer py-4">
           {repoLoading && PRLoading ? <Loader />:
             (
-              <div>
+              <div className="container">
 
-                <h1 className="py-2">Here's my projects and pull requests to other open source projects</h1>
+                <h1 className="py-2">Here's my projects and pull requests to other open source projects.</h1>
 
                 <h2 className="py-2">Repositories</h2>
 
                 <div className="mb-4">
-                  <Grid container spacing={3}>
+                  <Grid container spacing={1}>
                     {repos.filter(r => !r.fork).map(repo => {
                       return <Repo key={repo.id} repo={repo}/>
                     })}
@@ -95,7 +95,7 @@ function App() {
                 <h2 className="py-2">Forked Repositories</h2>
 
                 <div className="mb-4">
-                  <Grid container spacing={3}>
+                  <Grid container spacing={1}>
                     {repos.filter(r => r.fork).map(repo => {
                       return <Repo key={repo.id} repo={repo}/>
                     })}
@@ -105,11 +105,9 @@ function App() {
                 <h2 className="py-2">Pull Requests</h2>
                 
                 <div className="mb-4">
-                  <ol>
                     {pullRequests.map(pr => {
                       return <PullRequest key={pr.url} pr={pr}/>
                     })}
-                  </ol>
                 </div>
         
               </div>

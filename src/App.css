@@ -62,11 +62,13 @@ footer{
 .repo-container{
   padding-right: 15px;
   padding-left: 15px;
-  margin-right: auto;
   text-overflow: ellipsis;
   overflow-wrap: break-word;
   margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 
 .box:hover{
@@ -78,7 +80,7 @@ ol li{
 }
 
 .text-small {
-  font-size: calc(5px + 1vmin);
+  font-size: calc(4px + 1vmin);
   color: #8b949e;
 }
 
@@ -143,7 +145,7 @@ ol {
   outline: 1px solid transparent;
 }
 
-.spinnerContainer{
+.spinner-container{
   text-align: center;
 }
 
@@ -154,10 +156,10 @@ ol {
   overflow: hidden;
 }
 
-.repoLanguageLink:hover{
+.repo-language-link:hover{
   text-decoration: none !important;
 }
 
-.repoLanguageLink:hover span{
+.repo-language-link:hover span{
   color: #58a6ff !important;
 }

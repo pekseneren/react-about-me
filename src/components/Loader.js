@@ -4,7 +4,7 @@ import * as loading from '../assets/loader.json'
 
 const defaultOptions = {
     loop: true,
-    autoplay:true,
+    autoplay: true,
     animationData: loading.default,
     rendererSettings: {
         preserveAspectRatio: 'xMidYMid slice'
@@ -13,9 +13,7 @@ const defaultOptions = {
 
 const Loader = () => {
     return(
-        <div>
-            <Lottie options={defaultOptions}/>
-        </div>
+        <Lottie options={defaultOptions}/>
     )
 }
 
