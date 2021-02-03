@@ -4,4 +4,6 @@ I'm learning ReactJS with this project.
 
 - [Live demo](https://pekseneren.herokuapp.com/)
 
-- [Roadmap](https://github.com/kamranahmedse/developer-roadmap)
+- [Github API](https://docs.github.com/en/rest)
+
+- [Roadmap](https://roadmap.sh/react)

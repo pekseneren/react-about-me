@@ -2,6 +2,7 @@ import '../App.css'
 import LanguageStat from "./LanguageStat";
 import LabelStackBar from "./LabelStackBar";
 import LanguageColorData from '../constants/LanguageColors.json'
+import { Grid } from '@material-ui/core';
 
 function Repo(props) {
     const {url, name, description, stats} = props.repo
@@ -16,22 +17,27 @@ function Repo(props) {
         let percent = (100 * item.usage) / totals;
         item.percent = percent.toFixed(2) + "%";
         item.color = LanguageColorData[item.name];
-
+        item.url = url;
+        
         if (item.color === undefined) {
             item.color = "#ccc"
         }
     });
 
     return (
-        <li>
+        <Grid item xs={12} md={4} lg={3}>
             <div className="box">
-                <div className="container">
-                    <a href={url} target="blank"><span>{name}</span></a>
-                    <p className="text-small">{description}</p>
+                <div className="repo-container">
+                    <Grid>
+                        <a href={url} target="blank"><span>{name}</span></a>
+                    </Grid>
+                    <Grid>
+                        <p className="text-small line-clamp">{description}</p>
+                    </Grid>
                     {
                         stats.length > 0 &&
 
-                        <div>
+                        <Grid>
                             <div className="mb-2">
                                 <span className="text-small" style={{color: 'white', fontWeight: 600}}>Languages</span>
                             </div>
@@ -49,11 +55,11 @@ function Repo(props) {
                                     })}
                                 </ol>
                             </div>
-                        </div>
+                        </Grid>
                     }
                 </div>
             </div>
-        </li>
+        </Grid>
     );
 }
 

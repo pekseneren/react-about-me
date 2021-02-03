@@ -56,11 +56,10 @@ footer{
   border-style: solid;
   border-width: 1px;
   border-radius: 6px;
-  margin-bottom: 1rem;
+  height: 100%;
 }
 
-.container{
-  width: 80%;
+.repo-container{
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
@@ -131,12 +130,34 @@ ol {
   margin-bottom: 8px;
 }
 
+.mb-4{
+  margin-bottom: 16px;
+}
+
 .progress{
   display: flex;
-  height: 6px;
+  height: 4px;
   overflow: hidden;
   background-color: #21262d;
   border-radius: 6px;
   outline: 1px solid transparent;
-  width: 40%;
+}
+
+.spinnerContainer{
+  text-align: center;
+}
+
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+}
+
+.repoLanguageLink:hover{
+  text-decoration: none !important;
+}
+
+.repoLanguageLink:hover span{
+  color: #58a6ff !important;
 }
