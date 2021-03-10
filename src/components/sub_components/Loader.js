@@ -1,6 +1,7 @@
+import { Container } from '@material-ui/core'
 import React from 'react'
 import Lottie from 'react-lottie'
-import * as loading from '../assets/loader.json'
+import * as loading from '../../assets/loader.json'
 
 const defaultOptions = {
     loop: true,
@@ -13,7 +14,9 @@ const defaultOptions = {
 
 const Loader = () => {
     return(
-        <Lottie options={defaultOptions}/>
+        <Container>
+            <Lottie options={defaultOptions}/>
+        </Container>
     )
 }
 

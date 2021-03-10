@@ -1,5 +1,4 @@
 .App {
-  background-color: #0d1117;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -34,6 +33,7 @@ header{
 }
 
 footer{
+  margin-top: auto;
   text-align: center;
   background-color: #161b22;
   color: #c9d1d9;
@@ -80,7 +80,7 @@ ol li{
 }
 
 .text-small {
-  font-size: calc(4px + 1vmin);
+  font-size: calc(8px + 1vmin);
   color: #8b949e;
 }
 
@@ -108,12 +108,12 @@ a:active {
 
 h1{
   color: #c9d1d9;
-  font-size: calc(12px + 2vmin);
+  font-size: calc(15px + 2vmin);
 }
 
 h2{
   color: #c9d1d9;
-  font-size: calc(2px + 2vmin);
+  font-size: calc(10px + 2vmin);
 }
 
 ol { 
@@ -163,3 +163,22 @@ ol {
 .repo-language-link:hover span{
   color: #58a6ff !important;
 }
+
+html, body, #root {
+  height: 100%;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+ }
+
+ body{
+  background-color: #0d1117;
+ }
+
+ .social-link{
+   width: 32px;
+   margin-right: 1em;
+   margin-top: 1em;
+ }

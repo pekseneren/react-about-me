@@ -1,4 +1,4 @@
-import '../App.css'
+import '../../App.css'
 
 function LanguageStat(props) {
     const {name, percent, color, url} = props.stat
