@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import Home from './components/base_components/Home'
 import Projects from './components/base_components/Projects'
+import { Container } from '@material-ui/core';
 
 function App() {
 
@@ -28,14 +29,10 @@ function App() {
         </Switch>
 
         <footer>
-          <div>
-            <a href="https://github.com/pekseneren/reactjs-about-me" target="blank">This project</a>
-            <span> developed with ❤️ & ReactJS.</span>
-          </div>
-          <div>
-            <span>Also checkout</span>
-            <a href="https://docs.github.com/en/rest" target="blank"> Github API</a>
-          </div>
+          <Container className="py-2">
+            <p><a href="https://github.com/pekseneren/reactjs-about-me" target="blank">This project</a> developed with ❤️ & ReactJS.</p>
+            <p>Also checkout <a href="https://docs.github.com/en/rest" target="blank">Github API</a></p>
+          </Container>
         </footer>
     </Router>
   );

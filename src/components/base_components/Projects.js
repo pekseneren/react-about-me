@@ -77,9 +77,9 @@ function Projects() {
         <div className="AppContainer py-4">
             {repoLoading && PRLoading ? <Loader /> : (
                 <Container>
-                    <h1 className="py-2">Here's my projects and pull requests to other open source projects.</h1>
+                    <h3 className="py-2 text-white">Here's my projects and pull requests to other open source projects.</h3>
 
-                    <h2 className="py-2">Repositories</h2>
+                    <h4 className="py-2 text-white">Repositories</h4>
 
                     <div className="mb-4">
                         <Grid container spacing={1}>
@@ -89,7 +89,7 @@ function Projects() {
                         </Grid>
                     </div>
 
-                    <h2 className="py-2">Forked Repositories</h2>
+                    <h4 className="py-2 text-white">Forked Repositories</h4>
 
                     <div className="mb-4">
                         <Grid container spacing={1}>
@@ -99,7 +99,7 @@ function Projects() {
                         </Grid>
                     </div>
 
-                    <h2 className="py-2">Pull Requests</h2>
+                    <h4 className="py-2 text-white">Pull Requests</h4>
 
                     <div className="mb-4">
                         {pullRequests.map(pr => {

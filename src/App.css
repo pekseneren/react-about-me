@@ -4,7 +4,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(1px + 2vmin);
   color: white;
 }
 
@@ -27,7 +26,6 @@ header{
   text-align: center;
   background-color: #161b22;
   color: #c9d1d9;
-  font-size: calc(10px + 2vmin);  
   box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.486);
   transition: 0.3s;
 }
@@ -37,8 +35,7 @@ footer{
   text-align: center;
   background-color: #161b22;
   color: #c9d1d9;
-  font-size: calc(10px + 2vmin);
-  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.486);
+  box-shadow: 0 -5px 8px 0 rgb(0 0 0 / 49%);
   transition: 0.3s;
 }
 
@@ -57,6 +54,7 @@ footer{
   border-width: 1px;
   border-radius: 6px;
   height: 100%;
+  box-shadow: 0 0 8px 4px rgb(0 0 0 / 49%);
 }
 
 .repo-container{
@@ -71,49 +69,38 @@ footer{
   height: 100%;
 }
 
-.box:hover{
-  box-shadow: 1px 0px 20px 12px rgb(46 43 43 / 43%);
-}
-
 ol li{ 
   list-style:none 
 }
 
 .text-small {
-  font-size: calc(8px + 1vmin);
   color: #8b949e;
 }
 
 a {
-  font-size: calc(10px + 1vmin);
   color:#58a6ff; 
   text-decoration: none;
 }
 
 a:visited {
-  font-size: calc(10px + 1vmin);
   color:#58a6ff;
 }
 
 a:hover {
-  font-size: calc(10px + 1vmin);
   color:#58a6ff;
   text-decoration: underline;
 }
 
 a:active {
-  font-size: calc(10px + 1vmin);
   color:#58a6ff;
 }
 
 h1{
   color: #c9d1d9;
-  font-size: calc(15px + 2vmin);
 }
 
 h2{
   color: #c9d1d9;
-  font-size: calc(10px + 2vmin);
 }
 
 ol { 
