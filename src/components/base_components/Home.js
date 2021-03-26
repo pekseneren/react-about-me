@@ -23,7 +23,7 @@ function Home() {
                         <a href="https://github.com/pekseneren" target="blank">
                             <img className="social-link" alt="github" src={github} />
                         </a>
-                        <a href="https://stackoverflow.com/users/6296896/eren-pek%c5%9fen" target="blank">
+                        <a href="https://stackoverflow.com/users/6296896/eren-peksen" target="blank">
                             <img className="social-link" alt="stackoverflow" src={stackoverflow} />
                         </a>
                         <a href="https://www.linkedin.com/in/eren-peksen" target="blank">
