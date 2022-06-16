@@ -18,7 +18,7 @@ function Home() {
                     <p>I'm Eren(not the titan), I am a backend developer living in Istanbul ❤️</p>
                     <p>Heres some technologies I have used 👉 .NET, JavaScript, Git, MSSQL, SQLite, Redis and Unity</p>
                     <p>And these are the technologies I want to understand completely and start learning in 2021 👉 Go, MongoDB, PostgreSQL, ReactJS, NodeJS, GraphQL, Docker, Kubernetes and Kafka</p>
-                    <Link to="/projects">my github projects</Link>
+                    <Link to="/react-about-me/projects">my github projects</Link>
                     <div className="mt-5 mx-auto">
                         <a href="https://github.com/pekseneren" target="blank">
                             <img className="social-link" alt="github" src={github} />

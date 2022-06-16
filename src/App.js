@@ -17,15 +17,15 @@ function App() {
         <header>
           <nav>
             <div className="nav-div py-2">
-              <Link className="mr-5" to="/">me</Link>
-              <Link to="/projects">projects</Link>
+              <Link className="mr-5" to="/react-about-me">me</Link>
+              <Link to="/react-about-me/projects">projects</Link>
             </div>
           </nav>
         </header>
 
         <Switch>
-            <Route path="/" exact component={Home} />
-            <Route path="/projects" component={Projects} />
+            <Route path="/react-about-me" exact component={Home} />
+            <Route path="/react-about-me/projects" component={Projects} />
         </Switch>
 
         <footer>
