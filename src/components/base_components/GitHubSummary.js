@@ -7,7 +7,7 @@ import Repo from "../sub_components/Repo"
 import PullRequest from "../sub_components/PullRequest"
 import { Container, Grid } from '@material-ui/core';
 
-function Projects() {
+function GitHubSummary() {
 
     const [repos, setRepos] = useState([])
     const [pullRequests, setPullRequests] = useState([])
@@ -77,7 +77,7 @@ function Projects() {
         <div className="AppContainer py-4">
             {repoLoading && PRLoading ? <Loader /> : (
                 <Container>
-                    <h3 className="py-2 text-white">Here's my projects and pull requests to other open source projects.</h3>
+                    <h3 className="py-2 text-white">Here's my Github Summary, powered by <a href="https://docs.github.com/en/rest" target="blank">Github API</a></h3>
 
                     <h4 className="py-2 text-white">Repositories</h4>
 
@@ -113,4 +113,4 @@ function Projects() {
     );
 }
 
-export default Projects;
+export default GitHubSummary;
