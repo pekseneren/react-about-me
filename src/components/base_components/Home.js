@@ -3,8 +3,6 @@ import '../../App.css'
 import github from "super-tiny-icons/images/svg/github.svg";
 import stackoverflow from "super-tiny-icons/images/svg/stackoverflow.svg";
 import linkedin from "super-tiny-icons/images/svg/linkedin.svg";
-import twitter from "super-tiny-icons/images/svg/twitter.svg";
-import gmail from "super-tiny-icons/images/svg/gmail.svg";
 
 function Home() {
 

@@ -17,7 +17,7 @@ function App() {
         <header>
           <nav>
             <div className="nav-div py-2">
-              <Link className="mr-5" to="/react-about-me">about me</Link>
+              <Link className="mr-5" to="/react-about-me">home</Link>
               <Link to="/react-about-me/github-summary">github summary</Link>
             </div>
           </nav>
