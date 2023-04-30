@@ -9,7 +9,7 @@ function Home() {
     return (
         <Container className="py-5">
             <div className="box">
-                <div className="m-5 text-white">
+                <div className="m-5">
                     <p>Hello there 👋</p>
                     <p>I'm Eren, a SDE living in UK</p>
                     <div className="mt-5 mx-auto">

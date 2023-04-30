@@ -1,7 +1,7 @@
 import '../../App.css'
 
 function PullRequest(props) {
-    const {url, title} = props.pr
+    const { url, title } = props.pr
 
     return (
         <div className="box mb-2">
