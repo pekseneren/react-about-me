@@ -1,10 +1,10 @@
 import '../../App.css'
 
 function LabelStackBar(props) {
-    const { color, percent } = props.stat
+    const {color, percent} = props.stat
 
     return (
-        <span style={{ backgroundColor: color, width: percent }}></span>
+        <span style={{backgroundColor: color, width: percent}}></span>
     );
 }
 

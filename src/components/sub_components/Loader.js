@@ -13,9 +13,9 @@ const defaultOptions = {
 }
 
 const Loader = () => {
-    return (
+    return(
         <Container>
-            <Lottie options={defaultOptions} />
+            <Lottie options={defaultOptions}/>
         </Container>
     )
 }
